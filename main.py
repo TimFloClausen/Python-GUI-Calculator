@@ -1,6 +1,13 @@
 import tkinter as TK
+import math
 
-root = TK.Tk()
-root.title("Python-GUI-Calculator")
 
-root.mainloop()
+window = TK.Tk()
+window.title("Python-GUI-Calculator")
+
+window.geometry("400x550+660+340")
+window.resizable(False, False)
+window.iconbitmap("thehalaldesign-math-6683827.ico")
+
+
+window.mainloop()
