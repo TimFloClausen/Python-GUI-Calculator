@@ -5,7 +5,7 @@ import math
 window = TK.Tk()
 window.title("Python-GUI-Calculator")
 
-window.geometry("400x550+660+340")
+
 window.resizable(False, False)
 window.iconbitmap("thehalaldesign-math-6683827.ico")
 
@@ -22,12 +22,15 @@ frame5.pack(side='left', anchor='n')
 
 pixel = TK.PhotoImage(width=55, height=55)
 
+entry = TK.Entry(window, width=9, font=("San Francisco", 38, "bold"), state="readonly")
+entry.pack(pady=(30, 10))
+
 
 def buttons(text, frame):
-    button = TK.Button(frame, text=text, font=("San Francisc", 20), image=pixel, bg="#202225", fg="white", compound="center")
+    button = TK.Button(frame, text=text, font=("San Francisco", 20), image=pixel, bg="#202225", fg="white", compound="center")
     return button
 def buttons_ops(text, frame, bg, fg):
-    button = TK.Button(frame, text=text,  font=("San Francisc", 20), image=pixel, bg=bg, fg=fg, activebackground=bg,
+    button = TK.Button(frame, text=text,  font=("San Francisco", 20), image=pixel, bg=bg, fg=fg, activebackground=bg,
                        compound="center")
     return button
 
