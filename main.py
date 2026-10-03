@@ -9,6 +9,9 @@ window.title("Python-GUI-Calculator")
 window.resizable(False, False)
 window.iconbitmap("thehalaldesign-math-6683827.ico")
 
+entry = TK.Entry(window, width=9, font=("San Francisco", 38, "bold"), state="readonly")
+entry.pack(pady=(30, 10))
+
 frame1 = TK.Frame(window)
 frame1.pack(side='left', anchor='n')
 frame2 = TK.Frame(window)
@@ -22,8 +25,7 @@ frame5.pack(side='left', anchor='n')
 
 pixel = TK.PhotoImage(width=55, height=55)
 
-entry = TK.Entry(window, width=9, font=("San Francisco", 38, "bold"), state="readonly")
-entry.pack(pady=(30, 10))
+
 
 
 def buttons(text, frame):
