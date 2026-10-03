@@ -27,13 +27,29 @@ def buttons(text, frame):
     button = TK.Button(frame, text=text, font=("San Francisc", 20), image=pixel, bg="#202225255", fg="white", compound="center")
     return button
 def buttons_ops(text, frame, bg, fg):
-    button = TK.Button(frame, text=tetx,  font=("San Francisc", 20), image=pixel, bg=bg, fg=fg, activebackground="black",
+    button = TK.Button(frame, text=text,  font=("San Francisc", 20), image=pixel, bg=bg, fg=fg, activebackground="black",
                        compound="center")
     return button
 
+pi = buttons('',frame1).pack()
 btn1 = buttons('1',frame1).pack()
 btn4 = buttons('4', frame1).pack()
 btn7 = buttons('7', frame1).pack()
+
+btn2 = buttons('2', frame2).pack()
+btn5 = buttons('5', frame2).pack()
+btn8 = buttons('8', frame2).pack()
+btn0 = buttons_ops('0', frame2, '#333300', 'white').pack()
+
+plus = buttons_ops('+', frame4, 'black', 'white').pack()
+minus= buttons_ops('-', frame4,  'black', 'white').pack()
+mul = buttons_ops('x', frame4, 'black', 'white').pack()
+div = buttons_ops('/', frame4, 'black', 'white').pack()
+
+btn3 = buttons('3', frame3).pack()
+btn6 = buttons('6', frame3).pack()
+btn9 = buttons('9', frame3).pack()
+
 
 
 window.mainloop()
