@@ -31,21 +31,25 @@ def buttons_ops(text, frame, bg, fg):
                        compound="center")
     return button
 
-pi = buttons('',frame1).pack()
+pi = buttons('π',frame1).pack()
 btn1 = buttons('1',frame1).pack()
 btn4 = buttons('4', frame1).pack()
 btn7 = buttons('7', frame1).pack()
 
+btnx2 = buttons('x²', frame2).pack()
 btn2 = buttons('2', frame2).pack()
 btn5 = buttons('5', frame2).pack()
 btn8 = buttons('8', frame2).pack()
 btn0 = buttons_ops('0', frame2, '#333300', 'white').pack()
 
+btnx3 = buttons_ops('x³', frame4, 'black', 'white').pack()
 plus = buttons_ops('+', frame4, 'black', 'white').pack()
 minus= buttons_ops('-', frame4,  'black', 'white').pack()
 mul = buttons_ops('x', frame4, 'black', 'white').pack()
 div = buttons_ops('/', frame4, 'black', 'white').pack()
 
+
+btn_sc= buttons('√', frame3).pack()
 btn3 = buttons('3', frame3).pack()
 btn6 = buttons('6', frame3).pack()
 btn9 = buttons('9', frame3).pack()
