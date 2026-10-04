@@ -26,14 +26,20 @@ frame5.pack(side='left', anchor='n')
 pixel = TK.PhotoImage(width=55, height=55)
 
 
+def command(text):
+    entry.config(state='normal')
+    entry.insert(TK.END, text) 
+    entry.config(state='readonly')
+
 
 
 def buttons(text, frame):
-    button = TK.Button(frame, text=text, font=("San Francisco", 20), image=pixel, bg="#202225", fg="white", compound="center")
+    button = TK.Button(frame, text=text, font=("San Francisco", 20), image=pixel, bg="#202225", fg="white", compound="center",
+                        command=lambda :command(text))
     return button
 def buttons_ops(text, frame, bg, fg):
     button = TK.Button(frame, text=text,  font=("San Francisco", 20), image=pixel, bg=bg, fg=fg, activebackground=bg,
-                       compound="center")
+                        compound="center", command=lambda:command(text))
     return button
 
 pi = buttons_ops('π', frame1, "#616161", "white").pack()
