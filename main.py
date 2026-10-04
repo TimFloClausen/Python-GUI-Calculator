@@ -9,8 +9,14 @@ window.title("Python-GUI-Calculator")
 window.resizable(False, False)
 window.iconbitmap("thehalaldesign-math-6683827.ico")
 
+
+scrollbar = TK.Scrollbar(window, orient='horizontal')
+
 entry = TK.Entry(window, width=9, font=("San Francisco", 38, "bold"), state="readonly")
 entry.pack(pady=(30, 10))
+
+scrollbar.config(command=entry.xview)
+scrollbar.pack()
 
 frame1 = TK.Frame(window)
 frame1.pack(side='left', anchor='n')
@@ -31,6 +37,7 @@ def command(text):
     entry.insert(TK.END, text) 
     entry.config(state='readonly')
 
+def cmd_ac():
     entry.config(state='normal')
     entry.delete(0, TK.END)
     entry.config(state='readonly')
