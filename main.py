@@ -55,6 +55,15 @@ def cmd_equal():
     entry.insert(TK.END, result)
     entry.config(state='readonly')
 
+def cmd_pi(text):
+    entry.config(state='normal')
+    entry.insert(TK.END, ) 
+    entry.config(state='readonly')
+    text=π
+    π= math.pi
+
+
+
 
 
 
@@ -74,8 +83,9 @@ def buttons_extras(text, frame, bg, fg):
                         compound="center")
     return button
 
+pi = TK.Button(frame1, text="π", font=('San Francisco', 20), image=pixel, bg="#616161", fg="white", compound="center",
+                        command=lambda:cmd_ac(), command=lambda:command(text))
 
-pi = buttons_extras('π', frame1, "#616161", "white").pack()
 btn1 = buttons('1', frame1).pack()
 btn4 = buttons('4', frame1).pack()
 btn7 = buttons('7', frame1).pack()
@@ -102,7 +112,7 @@ btn3 = buttons('3', frame3).pack()
 btn6 = buttons('6', frame3).pack()
 btn9 = buttons('9', frame3).pack()
 equal= TK.Button(frame3, text='=', font=('San Francisco', 20), image=pixel, bg='white', fg='black', activebackground="black",
-                        compound="center", command=lambda: cmd_equal()).pack()
+                        command=lambda: cmd_pi()).pack()
 
 
 window.mainloop()
