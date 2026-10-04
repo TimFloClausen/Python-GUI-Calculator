@@ -37,6 +37,13 @@ The calculator is not finished yet. More features and improvements will be added
 * Python GUI framework
 * Git / GitHub
 
+## ## Sources/Tutorials Used
+
+[Pythontutorial - Tkinter-Window] (https://www.pythontutorial.net/tkinter/tkinter-window/)
+
+[Freecodecam - How to Build a Calculator with Tkinter in Python] (https://www.freecodecamp.org/news/build-a-calculator-with-tkinter-in-python/#heading-what-do-we-want-to-see-in-our-project)
+
+
 ## Planned Features
 
 * [ ] Basic arithmetic
