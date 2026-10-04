@@ -31,6 +31,10 @@ def command(text):
     entry.insert(TK.END, text) 
     entry.config(state='readonly')
 
+    entry.config(state='normal')
+    entry.delete(0, TK.END)
+    entry.config(state='readonly')
+
 def cmd_equal():
     entry.config(state='normal')
     txt = entry.get().replace('x', '*')
@@ -68,6 +72,8 @@ pi = buttons_extras('π', frame1, "#616161", "white").pack()
 btn1 = buttons('1', frame1).pack()
 btn4 = buttons('4', frame1).pack()
 btn7 = buttons('7', frame1).pack()
+ac = TK.Button(frame1, text="AC", font=('Arial', 20), image=pixel, bg="#666699", fg="white", compound="center",
+                        command=lambda: cmd_ac()).pack()
 
 btnx2 = buttons_extras('x²', frame2, "#616161", "white").pack()
 btn2 = buttons('2', frame2).pack()
