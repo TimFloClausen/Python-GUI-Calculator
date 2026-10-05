@@ -33,16 +33,21 @@ pixel = TK.PhotoImage(width=55, height=55)
 
 
 def command(text):
+    
     entry.config(state='normal')
     entry.insert(TK.END, text) 
     entry.config(state='readonly')
 
+DE
+
 def cmd_ac():
+    
     entry.config(state='normal')
     entry.delete(0, TK.END)
     entry.config(state='readonly')
 
 def cmd_equal():
+    π = math.pi
     entry.config(state='normal')
     txt = entry.get().replace('x', '*')
 
@@ -75,7 +80,13 @@ def buttons_extras(text, frame, bg, fg):
     return button
 
 
-pi = buttons_extras('π', frame1, "#616161", "white").pack()
+def buttons_pi(text, frame, bg, fg):
+    button = TK.Button(frame, text=text,  font=("San Francisco", 20), image=pixel, bg=bg, fg=fg, activebackground=bg,
+                        compound="center", command=lambda:command(text))
+    return button
+
+
+pi = buttons_pi('π', frame1, "#616161", "white").pack()
 btn1 = buttons('1', frame1).pack()
 btn4 = buttons('4', frame1).pack()
 btn7 = buttons('7', frame1).pack()
