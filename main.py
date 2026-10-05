@@ -2,6 +2,7 @@ import tkinter as TK
 import math
 
 
+
 window = TK.Tk()
 window.title("Python-GUI-Calculator")
 
@@ -38,7 +39,7 @@ def command(text):
     entry.insert(TK.END, text) 
     entry.config(state='readonly')
 
-DE
+
 
 def cmd_ac():
     
@@ -60,6 +61,38 @@ def cmd_equal():
     entry.insert(TK.END, result)
     entry.config(state='readonly')
 
+def power_of_2():
+
+        π = math.pi
+    if "x2" is in txt:
+        txt -= "x2" = txt ** 2
+        entry.config(state='normal')
+        txt = entry.get().replace('x', '*')
+    
+        try:
+            result = eval(txt)
+    
+        except:
+            result = 'INVALID'
+        entry.delete(0, TK.END)
+        entry.insert(TK.END, result)
+        entry.config(state='readonly')
+    else:
+        π = math.pi
+        entry.config(state='normal')
+        txt = entry.get().replace('x', '*')
+        
+        try:
+            result = eval(txt)
+        
+        except:
+            result = 'INVALID'
+        entry.delete(0, TK.END)
+        entry.insert(TK.END, result)
+        entry.config(state='readonly')
+        
+
+        
 
 
 
@@ -76,24 +109,20 @@ def buttons_ops(text, frame, bg, fg):
 
 def buttons_extras(text, frame, bg, fg):
     button = TK.Button(frame, text=text,  font=("San Francisco", 20), image=pixel, bg=bg, fg=fg, activebackground=bg,
-                        compound="center")
-    return button
-
-
-def buttons_pi(text, frame, bg, fg):
-    button = TK.Button(frame, text=text,  font=("San Francisco", 20), image=pixel, bg=bg, fg=fg, activebackground=bg,
                         compound="center", command=lambda:command(text))
     return button
 
 
-pi = buttons_pi('π', frame1, "#616161", "white").pack()
+
+
+pi = buttons_extras('π', frame1, "#616161", "white").pack()
 btn1 = buttons('1', frame1).pack()
 btn4 = buttons('4', frame1).pack()
 btn7 = buttons('7', frame1).pack()
 ac = TK.Button(frame1, text="AC", font=('Arial', 20), image=pixel, bg="#666699", fg="white", compound="center",
                         command=lambda: cmd_ac()).pack()
 
-btnx2 = buttons_extras('x²', frame2, "#616161", "white").pack()
+btnx2 = buttons_extras('x2', frame2, "#616161", "white").pack()
 btn2 = buttons('2', frame2).pack()
 btn5 = buttons('5', frame2).pack()
 btn8 = buttons('8', frame2).pack()
