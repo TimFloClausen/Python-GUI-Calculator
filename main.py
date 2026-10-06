@@ -62,36 +62,20 @@ def cmd_equal():
     entry.config(state='readonly')
 
 def power_of_2():
+    π = math.pi
+    entry.config(state='normal')
+    txt = entry.get()
 
-        π = math.pi
-    if "x2" is in txt:
-        txt -= "x2" = txt ** 2
-        entry.config(state='normal')
-        txt = entry.get().replace('x', '*')
+    try:
+        result = eval(txt) ** 2
+        
+    except:
+        result = 'INVALID'
+    entry.delete(0, TK.END)
+    entry.insert(TK.END, result)
+    entry.config(state='readonly')
+        
     
-        try:
-            result = eval(txt)
-    
-        except:
-            result = 'INVALID'
-        entry.delete(0, TK.END)
-        entry.insert(TK.END, result)
-        entry.config(state='readonly')
-    else:
-        π = math.pi
-        entry.config(state='normal')
-        txt = entry.get().replace('x', '*')
-        
-        try:
-            result = eval(txt)
-        
-        except:
-            result = 'INVALID'
-        entry.delete(0, TK.END)
-        entry.insert(TK.END, result)
-        entry.config(state='readonly')
-        
-
         
 
 
@@ -120,9 +104,11 @@ btn1 = buttons('1', frame1).pack()
 btn4 = buttons('4', frame1).pack()
 btn7 = buttons('7', frame1).pack()
 ac = TK.Button(frame1, text="AC", font=('Arial', 20), image=pixel, bg="#666699", fg="white", compound="center",
-                        command=lambda: cmd_ac()).pack()
+                        command=cmd_ac).pack()
 
-btnx2 = buttons_extras('x2', frame2, "#616161", "white").pack()
+btnx2= TK.Button(frame2, text='x2', font=('San Francisco', 20), image=pixel, bg="#616161", fg='white', compound="center",
+                    command=power_of_2).pack()
+
 btn2 = buttons('2', frame2).pack()
 btn5 = buttons('5', frame2).pack()
 btn8 = buttons('8', frame2).pack()
