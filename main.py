@@ -88,6 +88,23 @@ def power_of_3():
     entry.delete(0, TK.END)
     entry.insert(TK.END, result)
     entry.config(state='readonly')
+
+
+def SR():
+    π = math.pi
+    entry.config(state='normal')
+    txt = entry.get()
+
+    try:
+        result = math.sqrt(eval(txt)) 
+        
+    except:
+        result = 'INVALID'
+    entry.delete(0, TK.END)
+    entry.insert(TK.END, result)
+    entry.config(state='readonly')
+
+math.sqrt(64) 
         
     
         
@@ -139,7 +156,12 @@ btn9 = buttons('9', frame3).pack()
 equal= TK.Button(frame3, text='=', font=('San Francisco', 20), image=pixel, bg='white', fg='black', activebackground="black",
                         compound="center", command=lambda: cmd_equal()).pack()
 
-btnsr= buttons_extras('√', frame4, "#616161", "white").pack()
+
+btnsr= TK.Button(frame4, text='√', font=('San Francisco', 20), image=pixel, bg="#616161", fg='white', compound="center",
+                    command=SR).pack()
+
+
+
 plus = buttons_ops('+', frame4, "#ff9006", 'white').pack()
 minus= buttons_ops('-', frame4,  "#ff9006", 'white').pack()
 mul = buttons_ops('x', frame4, "#ff9006", 'white').pack()
