@@ -46,10 +46,10 @@ The calculator is not finished yet. More features and improvements will be added
 
 ## Planned Features
 
-* [ ] Basic arithmetic
-* [ ] π (pi)
-* [ ] Powers (², ³)
-* [ ] Square root
-* [ ] Error handling
-* [ ] Improved GUI
+* [x] Basic arithmetic
+* [x] π (pi)
+* [x] Powers (², ³)
+* [x] Square root
+* [x] Error handling
+* [x] Improved GUI
 * [ ] More mathematical functions
